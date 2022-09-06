@@ -1,0 +1,43 @@
+{
+    "name": "tonisormisson/yii-usuario-views-bootstrap4",
+    "description": "Bootstrap 4 views for 2amigos/yii-usuario",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "uauario",
+        "yii",
+        "yii2"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "8.0.2",
+        "yiisoft/yii2-bootstrap4": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3",
+        "squizlabs/php_codesniffer": "*",
+        "phpmd/phpmd": "@stable",
+        "phpstan/phpstan": "^1.8"
+    },
+    "config": {
+        "platform": {
+            "php": "8.0.2"
+        },
+        "preferred-install": {
+            "*": "auto"
+        },
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
