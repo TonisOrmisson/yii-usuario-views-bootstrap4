@@ -21,3 +21,14 @@ In your user module config set the viewPath to the views folder of this package.
     'viewPath' => '@tonisormisson/yii2-usuario-views-bootstrap4/views',
 ]
 ```
+
+In your app params, set bsVersion to 4 (required by kartik select2 dependency)
+```
+'params' => [
+    ...
+    'bsVersion' => '4',
+    ...
+]
+```
+
+
