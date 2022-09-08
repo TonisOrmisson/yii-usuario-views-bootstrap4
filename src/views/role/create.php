@@ -10,9 +10,9 @@
  */
 
 /**
- * @var \Da\User\Model\Role
- * @var $this               yii\web\View
- * @var $unassignedItems    string[]
+ * @var \Da\User\Model\Role $model
+ * @var yii\web\View $this
+ * @var string[] $unassignedItems
  */
 $this->title = Yii::t('usuario', 'Create new role');
 $this->params['breadcrumbs'][] = $this->title;

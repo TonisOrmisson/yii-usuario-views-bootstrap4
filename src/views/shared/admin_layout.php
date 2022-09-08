@@ -12,7 +12,8 @@
 use yii\helpers\Html;
 
 /**
- * @var $content string
+ * @var yii\web\View $this
+ * @var string $content
  */
 
 ?>

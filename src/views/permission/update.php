@@ -11,8 +11,8 @@
 
 /**
  * @var \Da\User\Model\Permission $model
- * @var $this                     yii\web\View
- * @var $unassignedItems          string[]
+ * @var yii\web\View $this
+ * @var string[] $unassignedItems
  */
 
 $this->title = Yii::t('usuario', 'Update permission');
@@ -32,4 +32,3 @@ $module = Yii::$app->getModule('user');
 ) ?>
 
 <?php $this->endContent() ?>
-

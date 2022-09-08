@@ -10,9 +10,9 @@
  */
 
 /**
- * @var $dataProvider \yii\data\ActiveDataProvider
- * @var $this         yii\web\View
- * @var $searchModel  \Da\User\Search\PermissionSearch
+ * @var \yii\data\ActiveDataProvider $dataProvider
+ * @var \Da\User\Search\PermissionSearch $searchModel
+ * @var yii\web\View $this
  * @var Da\User\Module $module
  */
 

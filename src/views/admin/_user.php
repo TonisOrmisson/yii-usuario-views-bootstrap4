@@ -10,7 +10,7 @@
  */
 
 /**
- * @var yii\widgets\ActiveForm
+ * @var yii\widgets\ActiveForm $form
  * @var \Da\User\Model\User    $user
  */
 ?>

@@ -10,7 +10,7 @@
  */
 
 /**
- * @var yii\web\View
+ * @var yii\web\View $this
  * @var \Da\User\Model\User $user
  */
 $module = Yii::$app->getModule('user');

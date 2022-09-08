@@ -15,9 +15,9 @@ use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
 
 /**
- * @var $this            yii\web\View
- * @var $model           Da\User\Model\Permission
- * @var $unassignedItems string[]
+ * @var \Da\User\Model\Permission $model
+ * @var yii\web\View $this
+ * @var string[] $unassignedItems
  */
 
 ?>

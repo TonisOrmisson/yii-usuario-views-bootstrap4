@@ -13,7 +13,9 @@
     "require": {
         "php": "8.0.2",
         "yiisoft/yii2-bootstrap4": "^2.0",
-        "2amigos/yii2-usuario": "dev-master"
+        "2amigos/yii2-usuario": "dev-master",
+        "kartik-v/yii2-widget-select2": "^2.2"
+
     },
     "require-dev": {
         "phpmd/phpmd": "@stable",

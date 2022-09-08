@@ -12,14 +12,18 @@
 use yii\bootstrap4\Alert;
 
 /**
- * @var $module Da\User\Module
+ * @var yii\web\View $this
+ * @var Da\User\Module $module
  */
+/** @var \yii\web\Application $app */
+$app = Yii::$app;
+
 ?>
 
 <?php if ($module->enableFlashMessages): ?>
     <div class="row">
         <div class="col-xs-12">
-            <?php foreach (Yii::$app->session->getAllFlashes(true) as $type => $message): ?>
+            <?php foreach ($app->getSession()->getAllFlashes(true) as $type => $message): ?>
                 <?php if (in_array($type, ['success', 'danger', 'warning', 'info'], true)): ?>
                     <?= Alert::widget(
                         [

@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 
-/* @var $module \Da\User\Module */
+/** @var \Da\User\Module $module **/
+/** @var yii\web\View $this **/
 
 $this->title = Yii::t('usuario', 'Privacy settings');
 
