@@ -15,9 +15,9 @@ use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
 
 /**
- * @var $this           yii\web\View
- * @var $model          Da\User\Model\Assignment
- * @var $availableItems string[]
+ * @var yii\web\View $this
+ * @var Da\User\Model\Assignment $model
+ * @var string[] $availableItems
  */
 
 ?>
