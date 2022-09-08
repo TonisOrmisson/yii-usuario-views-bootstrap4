@@ -176,7 +176,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         return null;
                     },
                     'force-password-change' => function ($url, $model) use ($module) {
-                        if (is_null($module->maxPasswordAge)) {
+                        if (empty($module->maxPasswordAge)) {
                             return null;
                         }
                         return Html::a(
