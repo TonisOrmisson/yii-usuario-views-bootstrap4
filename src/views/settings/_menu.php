@@ -12,10 +12,17 @@
 use yii\helpers\Html;
 use yii\widgets\Menu;
 
-/** @var \Da\User\Model\User $user */
-$user = Yii::$app->user->identity;
+/** @var \Da\User\Module $module */
 $module = Yii::$app->getModule('user');
-$networksVisible = count(Yii::$app->authClientCollection->clients) > 0;
+
+/** @var \yii\web\Application $app */
+$app = Yii::$app;
+
+/** @var \Da\User\Model\User $user */
+$user = $app->user->identity;
+/** @var \yii\authclient\Collection $authClientCollection */
+$authClientCollection = $app->get('authClientCollection');
+$networksVisible = count($authClientCollection->clients) > 0;
 
 ?>
 

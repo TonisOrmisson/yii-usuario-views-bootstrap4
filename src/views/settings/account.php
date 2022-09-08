@@ -24,8 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 /** @var \Da\User\Module $module */
 $module = Yii::$app->getModule('user');
+$user = $model->getUser();
 ?>
-<div class="clearfix"></div>
+<?php if($user instanceof \Da\User\Model\User):?>
+
+    <div class="clearfix"></div>
 
 <?= $this->render('/shared/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
@@ -105,10 +108,10 @@ $module = Yii::$app->getModule('user');
                     <div class="text-right">
                         <?= Html::a(
                             Yii::t('usuario', 'Disable two factor authentication'),
-                            ['two-factor-disable', 'id' => $model->getUser()->id],
+                            ['two-factor-disable', 'id' => $user->getId()],
                             [
                                 'id' => 'disable_tf_btn',
-                                'class' => 'btn btn-warning ' . ($model->getUser()->auth_tf_enabled ? '' : 'hide'),
+                                'class' => 'btn btn-warning ' . ($user->auth_tf_enabled ? '' : 'hide'),
                                 'data-method' => 'post',
                                 'data-confirm' => Yii::t('usuario', 'This will disable two factor authentication. Are you sure?'),
                             ]
@@ -118,7 +121,7 @@ $module = Yii::$app->getModule('user');
                             '#tfmodal',
                             [
                                 'id' => 'enable_tf_btn',
-                                'class' => 'btn btn-info ' . ($model->getUser()->auth_tf_enabled ? 'hide' : ''),
+                                'class' => 'btn btn-info ' . ($user->auth_tf_enabled ? 'hide' : ''),
                                 'data-toggle' => 'modal',
                                 'data-target' => '#tfmodal'
                             ]
@@ -155,12 +158,11 @@ $module = Yii::$app->getModule('user');
     </div>
 </div>
 <?php if ($module->enableTwoFactorAuthentication): ?>
-
     <?php
     // This script should be in fact in a module as an external file
     // consider overriding this view and include your very own approach
-    $uri = Url::to(['two-factor', 'id' => $model->getUser()->id]);
-    $verify = Url::to(['two-factor-enable', 'id' => $model->getUser()->id]);
+    $uri = Url::to(['two-factor', 'id' => $user->id]);
+    $verify = Url::to(['two-factor-enable', 'id' => $user->id]);
     $js = <<<JS
 $('#tfmodal')
     .on('show.bs.modal', function(){
@@ -193,4 +195,6 @@ JS;
 
     $this->registerJs($js);
     ?>
+<?php endif;?>
+
 <?php endif; ?>

@@ -21,10 +21,14 @@ use yii\widgets\Pjax;
  * @var Da\User\Module $module
  */
 
+/** @var \yii\web\Application $app */
+$app = Yii::$app;
+/** @var \Da\User\Model\User $user */
+$user = $app->user->identity;
+
 $this->title = Yii::t('usuario', 'Manage users');
 $this->params['breadcrumbs'][] = $this->title;
 
-$module = Yii::$app->getModule('user');
 ?>
 
 <?php $this->beginContent($module->viewPath . '/shared/admin_layout.php') ?>
@@ -101,7 +105,7 @@ $module = Yii::$app->getModule('user');
                     );
                 },
                 'format' => 'raw',
-                'visible' => Yii::$app->getModule('user')->enableEmailConfirmation,
+                'visible' => $module->enableEmailConfirmation,
             ],
             'password_age',
             [
@@ -135,8 +139,8 @@ $module = Yii::$app->getModule('user');
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{switch} {reset} {force-password-change} {update} {delete}',
                 'buttons' => [
-                    'switch' => function ($url, $model) use ($module) {
-                        if ($model->id != Yii::$app->user->id && $module->enableSwitchIdentities) {
+                    'switch' => function ($url, $model) use ($module, $user) {
+                        if ($model->id != $user->id && $module->enableSwitchIdentities) {
                             return Html::a(
                                 '<span class="fa fa-user"></span>',
                                 ['/user/admin/switch-identity', 'id' => $model->id],
