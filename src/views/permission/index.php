@@ -22,7 +22,6 @@ use yii\helpers\Url;
 
 $this->title = Yii::t('usuario', 'Permissions');
 $this->params['breadcrumbs'][] = $this->title;
-$module = Yii::$app->getModule('user');
 
 ?>
 

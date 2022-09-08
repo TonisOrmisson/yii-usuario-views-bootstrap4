@@ -9,6 +9,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
+use Da\User\Helper\AuthHelper;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -19,6 +20,9 @@ use kartik\select2\Select2;
  * @var yii\web\View $this
  * @var string[] $unassignedItems
  */
+
+/** @var AuthHelper $authHelper */
+$authHelper = Yii::$container->get(AuthHelper::class);
 
 ?>
 
@@ -36,7 +40,7 @@ use kartik\select2\Select2;
 
 <?= $form->field($model, 'rule')->widget(Select2::class, [
     'bsVersion' => 4,
-    'data' => ArrayHelper::map(Yii::$app->getAuthManager()->getRules(), 'name', 'name'),
+    'data' => ArrayHelper::map($authHelper->getAuthManager()->getRules(), 'name', 'name'),
     'options' => [
         'placeholder' => Yii::t('usuario', 'Select rule...'),
     ],

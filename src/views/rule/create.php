@@ -16,6 +16,8 @@
  */
 $this->title = Yii::t('usuario', 'Create new rule');
 $this->params['breadcrumbs'][] = $this->title;
+
+/** @var \Da\User\Module $module */
 $module = Yii::$app->getModule('user');
 
 ?>

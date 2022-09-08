@@ -17,11 +17,11 @@ use yii\helpers\Url;
  * @var \yii\data\ActiveDataProvider $dataProvider
  * @var \Da\User\Search\RoleSearch $searchModel
  * @var yii\web\View $this
+ * @var \Da\User\Module $module
  */
 
 $this->title = Yii::t('usuario', 'Roles');
 $this->params['breadcrumbs'][] = $this->title;
-$module = Yii::$app->getModule('user');
 
 ?>
 

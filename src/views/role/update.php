@@ -13,10 +13,10 @@
  * @var \Da\User\Model\Role $model
  * @var yii\web\View $this
  * @var string[] $unassignedItems
+ * @var \Da\User\Module $module
  */
 $this->title = Yii::t('usuario', 'Update role');
 $this->params['breadcrumbs'][] = $this->title;
-$module = Yii::$app->getModule('user');
 
 ?>
 

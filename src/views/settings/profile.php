@@ -18,11 +18,11 @@ use yii\widgets\ActiveForm;
  * @var yii\web\View           $this
  * @var yii\widgets\ActiveForm $form
  * @var \Da\User\Model\Profile $model
- * @var TimezoneHelper         $timezoneHelper
  */
 
 $this->title = Yii::t('usuario', 'Profile settings');
 $this->params['breadcrumbs'][] = $this->title;
+/** @var TimezoneHelper $timezoneHelper */
 $timezoneHelper = $model->make(TimezoneHelper::class);
 ?>
 
@@ -64,7 +64,7 @@ $timezoneHelper = $model->make(TimezoneHelper::class);
 
                 <?= $form
                     ->field($model, 'timezone')
-                    ->dropDownList(ArrayHelper::map($timezoneHelper->getAll(), 'timezone', 'name'));
+                    ->dropDownList(ArrayHelper::map($timezoneHelper::getAll(), 'timezone', 'name'));
                 ?>
                 <?= $form
                     ->field($model, 'gravatar_email')

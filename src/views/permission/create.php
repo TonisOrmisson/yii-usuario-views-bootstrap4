@@ -18,7 +18,6 @@
 
 $this->title = Yii::t('usuario', 'Create new permission');
 $this->params['breadcrumbs'][] = $this->title;
-$module = Yii::$app->getModule('user');
 
 ?>
 

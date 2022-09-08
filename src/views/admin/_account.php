@@ -14,6 +14,7 @@ use yii\helpers\Html;
 
 /** @var yii\web\View $this **/
 /** @var Da\User\Model\User $user **/
+/** @var Da\User\Module $module **/
 
 $module = Yii::$app->getModule('user');
 

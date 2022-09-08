@@ -20,7 +20,10 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$unassignedItems = Yii::$container->get(AuthHelper::class)->getUnassignedItems($model);
+/** @var AuthHelper $authHelper */
+$authHelper = Yii::$container->get(AuthHelper::class);
+$unassignedItems = $authHelper->getUnassignedItems($model);
+
 ?>
 
 <?php $form = ActiveForm::begin(
@@ -35,7 +38,7 @@ $unassignedItems = Yii::$container->get(AuthHelper::class)->getUnassignedItems($
 <?= $form->field($model, 'description') ?>
 
 <?= $form->field($model, 'rule')->widget(Select2::class, [
-    'data' => ArrayHelper::map(Yii::$app->getAuthManager()->getRules(), 'name', 'name'),
+    'data' => ArrayHelper::map($authHelper->getAuthManager()->getRules(), 'name', 'name'),
     'options' => [
         'placeholder' => Yii::t('usuario', 'Select rule...'),
     ],

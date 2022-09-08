@@ -9,11 +9,11 @@ use yii\rbac\Rule;
  * @var \yii\data\ActiveDataProvider $dataProvider
  * @var \Da\User\Search\RuleSearch $searchModel
  * @var yii\web\View $this
+ * @var \Da\User\Module $module
  */
 
 $this->title = Yii::t('usuario', 'Rules');
 $this->params['breadcrumbs'][] = $this->title;
-$module = Yii::$app->getModule('user');
 
 ?>
 
@@ -37,7 +37,6 @@ $module = Yii::$app->getModule('user');
                 'label' => Yii::t('usuario', 'Class'),
                 'value' => function ($row) {
                     $rule = unserialize($row['data']);
-
                     return get_class($rule);
                 },
                 'options' => [
