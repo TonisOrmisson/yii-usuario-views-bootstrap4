@@ -9,7 +9,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 run:
 
-```$composer require --prefer-dist tonisormisson/yii2-usuario-views-bootstrap4```
+```composer require --prefer-dist tonisormisson/yii2-usuario-views-bootstrap4```
 
 ## Usage
 
