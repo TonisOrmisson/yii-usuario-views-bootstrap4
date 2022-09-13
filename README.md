@@ -18,7 +18,7 @@ In your user module config set the viewPath to the views folder of this package.
 ```
 'user' => [
     'class' => \Da\User\Module::class,
-    'viewPath' => '@tonisormisson/yii2-usuario-views-bootstrap4/views',
+        'viewPath' => '@vendor/tonisormisson/yii-usuario-views-bootstrap4/src/views',
 ]
 ```
 
