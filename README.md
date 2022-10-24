@@ -1,3 +1,7 @@
+# NB the package namespace was changed to yii-usuario/
+changed the package name from `tonisormisson/yii-usuario-views-bootstrap4`  to `yii-usuario/yii-usuario-views-bootstrap4`
+to match the bs3 version `yii-usuario/yii-usuario-views-bootstrap3`
+
 # yii-usuario-views-bootstrap4
 A Bootstrap 4 theme for [yii2-usuario](https://github.com/2amigos/yii2-usuario)
 

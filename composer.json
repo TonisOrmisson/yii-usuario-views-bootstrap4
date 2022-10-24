@@ -1,5 +1,5 @@
 {
-    "name": "tonisormisson/yii-usuario-views-bootstrap4",
+    "name": "yii-usuario/yii-usuario-views-bootstrap4",
     "description": "Bootstrap 4 views for 2amigos/yii-usuario",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -36,7 +36,7 @@
         },
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0.x-dev"
+                "dev-master": "1.1.x-dev"
             }
         }
     },
