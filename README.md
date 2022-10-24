@@ -13,7 +13,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 run:
 
-```composer require --prefer-dist tonisormisson/yii2-usuario-views-bootstrap4```
+```composer require --prefer-dist yii-usuario/yii2-usuario-views-bootstrap4```
 
 ## Usage
 
@@ -22,7 +22,7 @@ In your user module config set the viewPath to the views folder of this package.
 ```
 'user' => [
     'class' => \Da\User\Module::class,
-        'viewPath' => '@vendor/tonisormisson/yii-usuario-views-bootstrap4/src/views',
+        'viewPath' => '@vendor/yii-usuario/yii-usuario-views-bootstrap4/src/views',
 ]
 ```
 
